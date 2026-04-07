@@ -1,14 +1,11 @@
 name: Software Design Patterns
-description: Reusable solutions to commonly occurring problems in software design,
-  including creational, structural, and behavioral patterns that help developers write
-  more maintainable and scalable code. Organizations adopt it to address specific
-  technical or business challenges in their environments.
+description: Reusable solutions to commonly occurring problems in software design, including creational, structural, and behavioral patterns that help developers write more maintainable and scalable code. Organizations adopt it to address specific technical or business challenges in their environments.
 url: https://refactoring.guru/design-patterns
 tags:
-- Software Engineering
-- Architecture
-- Best Practices
-- Object-Oriented Programming
+  - Architecture
+  - Best Practices
+  - Object-Oriented Programming
+  - Software Engineering
 created: '2025'
 modified: '2025'
 apis: []
