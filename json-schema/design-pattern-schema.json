@@ -1,0 +1,110 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://api-evangelist.github.io/software-design-patterns/json-schema/design-pattern-schema.json",
+  "title": "Software Design Pattern",
+  "description": "JSON Schema for documenting a Gang of Four or modern software design pattern",
+  "type": "object",
+  "required": ["name", "category", "intent"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the design pattern (e.g., 'singleton', 'observer')"
+    },
+    "name": {
+      "type": "string",
+      "description": "Name of the design pattern"
+    },
+    "category": {
+      "type": "string",
+      "enum": ["Creational", "Structural", "Behavioral"],
+      "description": "Gang of Four pattern category"
+    },
+    "intent": {
+      "type": "string",
+      "description": "Short statement of the pattern's purpose and intent"
+    },
+    "motivation": {
+      "type": "string",
+      "description": "The problem scenario that motivates use of this pattern"
+    },
+    "applicability": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Situations where this pattern is applicable"
+    },
+    "structure": {
+      "type": "object",
+      "properties": {
+        "participants": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Participant"
+          },
+          "description": "Classes and objects participating in the pattern"
+        },
+        "collaborations": {
+          "type": "string",
+          "description": "How participants collaborate to carry out their responsibilities"
+        }
+      }
+    },
+    "consequences": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Trade-offs and results of using this pattern"
+    },
+    "implementation": {
+      "type": "string",
+      "description": "Implementation hints and techniques"
+    },
+    "languages": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Programming languages with example implementations"
+    },
+    "relatedPatterns": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Related pattern names"
+    },
+    "aliases": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Other names for this pattern"
+    },
+    "references": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Reference"
+      }
+    }
+  },
+  "definitions": {
+    "Participant": {
+      "type": "object",
+      "required": ["name"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Role name of the participant"
+        },
+        "description": {
+          "type": "string",
+          "description": "Responsibilities of this participant"
+        },
+        "isAbstract": {
+          "type": "boolean",
+          "description": "Whether this participant is abstract/interface"
+        }
+      }
+    },
+    "Reference": {
+      "type": "object",
+      "properties": {
+        "title": {"type": "string"},
+        "url": {"type": "string", "format": "uri"},
+        "author": {"type": "string"}
+      }
+    }
+  }
+}

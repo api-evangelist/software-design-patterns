@@ -1,0 +1,146 @@
+vocabulary:
+  name: Software Design Patterns Vocabulary
+  description: >-
+    Comprehensive vocabulary and taxonomy for the 23 Gang of Four software design
+    patterns and modern design pattern extensions, organized by category with
+    definitions, intent, and usage context.
+  version: '1.0'
+  created: '2026-05-02'
+  modified: '2026-05-02'
+
+domains:
+  - name: Creational Patterns
+    description: Patterns that deal with object creation mechanisms
+    terms:
+      - term: Abstract Factory
+        definition: >-
+          Provides an interface for creating families of related or dependent
+          objects without specifying their concrete classes. Creates a factory
+          of factories.
+      - term: Builder
+        definition: >-
+          Separates the construction of a complex object from its representation,
+          allowing the same construction process to create different representations.
+          Uses a step-by-step construction protocol.
+      - term: Factory Method
+        definition: >-
+          Defines an interface for creating an object but lets subclasses decide
+          which class to instantiate. Lets a class defer instantiation to subclasses.
+      - term: Prototype
+        definition: >-
+          Specifies the kinds of objects to create using a prototypical instance,
+          and creates new objects by copying (cloning) this prototype.
+      - term: Singleton
+        definition: >-
+          Ensures a class has only one instance and provides a global point of
+          access to it. Controls instantiation and provides a shared access point.
+
+  - name: Structural Patterns
+    description: Patterns that deal with object composition and class relationships
+    terms:
+      - term: Adapter
+        definition: >-
+          Converts the interface of a class into another interface that clients
+          expect. Makes incompatible interfaces work together. Also known as Wrapper.
+      - term: Bridge
+        definition: >-
+          Decouples an abstraction from its implementation so the two can vary
+          independently, using composition over inheritance.
+      - term: Composite
+        definition: >-
+          Composes objects into tree structures to represent part-whole hierarchies.
+          Lets clients treat individual objects and compositions uniformly.
+      - term: Decorator
+        definition: >-
+          Attaches additional responsibilities to an object dynamically.
+          Provides a flexible alternative to subclassing for extending functionality.
+          Also known as Wrapper.
+      - term: Facade
+        definition: >-
+          Provides a simplified interface to a complex subsystem, defining a
+          higher-level interface that makes the subsystem easier to use.
+      - term: Flyweight
+        definition: >-
+          Uses sharing to efficiently support a large number of fine-grained
+          objects by externalizing intrinsic state from objects that can be shared.
+      - term: Proxy
+        definition: >-
+          Provides a surrogate or placeholder for another object to control
+          access to it. Enables lazy initialization, access control, logging,
+          and caching.
+
+  - name: Behavioral Patterns
+    description: Patterns that deal with object interaction and algorithm encapsulation
+    terms:
+      - term: Chain of Responsibility
+        definition: >-
+          Avoids coupling the sender of a request to its receiver by giving more
+          than one object a chance to handle the request, chaining the receivers
+          and passing the request along the chain.
+      - term: Command
+        definition: >-
+          Encapsulates a request as an object, allowing parameterization of
+          clients with different requests, queuing or logging requests, and
+          support for undoable operations.
+      - term: Interpreter
+        definition: >-
+          Given a language, defines a representation for its grammar along with
+          an interpreter that uses the representation to interpret sentences
+          in the language.
+      - term: Iterator
+        definition: >-
+          Provides a way to access the elements of an aggregate object sequentially
+          without exposing its underlying representation.
+      - term: Mediator
+        definition: >-
+          Defines an object that encapsulates how a set of objects interact,
+          promoting loose coupling by keeping objects from referring to each
+          other explicitly.
+      - term: Memento
+        definition: >-
+          Without violating encapsulation, captures and externalizes an object's
+          internal state so it can be restored to this state later. Enables undo.
+      - term: Observer
+        definition: >-
+          Defines a one-to-many dependency between objects so that when one object
+          changes state, all its dependents are notified and updated automatically.
+          Also known as Publish-Subscribe or Dependents.
+      - term: State
+        definition: >-
+          Allows an object to alter its behavior when its internal state changes.
+          The object will appear to change its class.
+      - term: Strategy
+        definition: >-
+          Defines a family of algorithms, encapsulates each one, and makes them
+          interchangeable. Lets the algorithm vary independently from the clients
+          that use it. Also known as Policy.
+      - term: Template Method
+        definition: >-
+          Defines the skeleton of an algorithm in an operation, deferring some
+          steps to subclasses. Lets subclasses redefine certain steps of an
+          algorithm without changing the algorithm's structure.
+      - term: Visitor
+        definition: >-
+          Represents an operation to be performed on elements of an object
+          structure. Lets you define a new operation without changing the
+          classes of the elements on which it operates.
+
+  - name: Modern Patterns
+    description: Patterns that emerged after the original Gang of Four catalog
+    terms:
+      - term: Null Object
+        definition: >-
+          Avoids null references by providing a default object with do-nothing
+          behavior, eliminating null checks throughout the codebase.
+      - term: Repository
+        definition: >-
+          Abstracts the data layer, providing collection-like interface to access
+          domain objects, decoupling business logic from data access logic.
+      - term: Unit of Work
+        definition: >-
+          Maintains a list of objects affected by a business transaction and
+          coordinates the writing out of changes and resolution of concurrency problems.
+      - term: Specification
+        definition: >-
+          Encapsulates business rules and criteria as combinable objects that
+          can test whether a candidate object satisfies the criteria.

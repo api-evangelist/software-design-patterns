@@ -1,0 +1,64 @@
+{
+  "title": "Observer Design Pattern - Example Documentation",
+  "description": "Example of documenting the Observer (Behavioral) design pattern from the Gang of Four catalog",
+  "data": {
+    "id": "observer",
+    "name": "Observer",
+    "category": "Behavioral",
+    "intent": "Define a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically.",
+    "motivation": "A spreadsheet object and bar chart object both depict the same data, and when data changes both need to update. The Observer pattern defines a Subject that maintains a list of Observers and notifies them automatically on state change without the subject knowing the details of its observers.",
+    "applicability": [
+      "When a change to one object requires changing others, and you don't know how many objects need to change",
+      "When an object should be able to notify other objects without making assumptions about who these objects are",
+      "When a subject can have many different observers with different interests in the same event",
+      "In event handling systems and GUI frameworks"
+    ],
+    "structure": {
+      "participants": [
+        {
+          "name": "Subject",
+          "description": "Knows its observers, provides interface for attaching and detaching Observer objects",
+          "isAbstract": true
+        },
+        {
+          "name": "ConcreteSubject",
+          "description": "Stores state of interest, sends notification to observers when state changes",
+          "isAbstract": false
+        },
+        {
+          "name": "Observer",
+          "description": "Defines an updating interface for objects that should be notified of changes in a subject",
+          "isAbstract": true
+        },
+        {
+          "name": "ConcreteObserver",
+          "description": "Maintains a reference to a ConcreteSubject, stores state consistent with subject, implements the Observer updating interface to keep state consistent",
+          "isAbstract": false
+        }
+      ],
+      "collaborations": "ConcreteSubject notifies its observers whenever a change occurs that could make its observers' state inconsistent with its own. After being informed, ConcreteObserver queries the subject for information to reconcile its state."
+    },
+    "consequences": [
+      "Abstract coupling between Subject and Observer",
+      "Support for broadcast communication",
+      "Unexpected updates — observers don't know about each other",
+      "Can cascade into multiple updates with complex dependencies"
+    ],
+    "implementation": "Make Subject responsible for maintaining observer list. Observer.Update() can pass changed data or let observers query the subject. Use push model (send data) or pull model (observers query subject). Consider using a change manager for complex dependencies.",
+    "languages": ["Java", "Python", "C#", "JavaScript", "TypeScript", "Go"],
+    "relatedPatterns": ["Mediator", "Singleton", "Model-View-Controller"],
+    "aliases": ["Dependents", "Publish-Subscribe"],
+    "references": [
+      {
+        "title": "Observer Pattern - Refactoring.Guru",
+        "url": "https://refactoring.guru/design-patterns/observer",
+        "author": "Refactoring.Guru"
+      },
+      {
+        "title": "Design Patterns: Elements of Reusable Object-Oriented Software",
+        "url": "https://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612",
+        "author": "Gang of Four (Gamma, Helm, Johnson, Vlissides)"
+      }
+    ]
+  }
+}

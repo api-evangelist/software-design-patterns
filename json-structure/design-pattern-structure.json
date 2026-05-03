@@ -1,0 +1,54 @@
+{
+  "title": "Software Design Patterns - Pattern Structure Documentation",
+  "description": "JSON Structure for documenting Gang of Four and modern software design patterns",
+  "version": "1.0",
+  "source": "https://refactoring.guru/design-patterns",
+  "structures": [
+    {
+      "name": "DesignPattern",
+      "description": "A documented software design pattern with intent, structure, and implementation guidance",
+      "fields": [
+        {"name": "id", "type": "string", "required": false, "description": "Pattern slug identifier (e.g., 'observer')"},
+        {"name": "name", "type": "string", "required": true, "description": "Pattern name"},
+        {"name": "category", "type": "enum[Creational|Structural|Behavioral]", "required": true, "description": "GoF category"},
+        {"name": "intent", "type": "string", "required": true, "description": "One-sentence purpose"},
+        {"name": "motivation", "type": "string", "required": false, "description": "Problem scenario"},
+        {"name": "applicability", "type": "array<string>", "required": false, "description": "When to use"},
+        {"name": "structure", "type": "PatternStructure", "required": false, "description": "Participants and collaborations"},
+        {"name": "consequences", "type": "array<string>", "required": false, "description": "Trade-offs"},
+        {"name": "implementation", "type": "string", "required": false, "description": "Implementation notes"},
+        {"name": "languages", "type": "array<string>", "required": false, "description": "Example languages"},
+        {"name": "relatedPatterns", "type": "array<string>", "required": false, "description": "Related patterns"},
+        {"name": "aliases", "type": "array<string>", "required": false, "description": "Alternative names"},
+        {"name": "references", "type": "array<Reference>", "required": false, "description": "Documentation links"}
+      ]
+    },
+    {
+      "name": "Participant",
+      "description": "A class or interface role in a design pattern",
+      "fields": [
+        {"name": "name", "type": "string", "required": true, "description": "Participant role name"},
+        {"name": "description", "type": "string", "required": false, "description": "Responsibilities"},
+        {"name": "isAbstract", "type": "boolean", "required": false, "description": "Abstract/interface flag"}
+      ]
+    }
+  ],
+  "categories": {
+    "Creational": {
+      "description": "Patterns that deal with object creation mechanisms",
+      "patterns": ["Abstract Factory", "Builder", "Factory Method", "Prototype", "Singleton"]
+    },
+    "Structural": {
+      "description": "Patterns that deal with object composition and relationships",
+      "patterns": ["Adapter", "Bridge", "Composite", "Decorator", "Facade", "Flyweight", "Proxy"]
+    },
+    "Behavioral": {
+      "description": "Patterns that deal with object interaction and responsibility",
+      "patterns": [
+        "Chain of Responsibility", "Command", "Interpreter", "Iterator",
+        "Mediator", "Memento", "Observer", "State", "Strategy",
+        "Template Method", "Visitor"
+      ]
+    }
+  }
+}

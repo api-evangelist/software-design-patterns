@@ -1,0 +1,62 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "gof": "https://refactoring.guru/design-patterns/ns#",
+    "pat": "https://api-evangelist.github.io/software-design-patterns/ns#",
+    "DesignPattern": {
+      "@id": "schema:HowTo",
+      "@type": "@id"
+    },
+    "name": {
+      "@id": "schema:name"
+    },
+    "intent": {
+      "@id": "schema:description"
+    },
+    "motivation": {
+      "@id": "pat:motivation"
+    },
+    "category": {
+      "@id": "schema:category"
+    },
+    "Creational": {
+      "@id": "gof:CreationalPattern"
+    },
+    "Structural": {
+      "@id": "gof:StructuralPattern"
+    },
+    "Behavioral": {
+      "@id": "gof:BehavioralPattern"
+    },
+    "Participant": {
+      "@id": "pat:Participant",
+      "@type": "@id"
+    },
+    "applicability": {
+      "@id": "schema:applicationCategory"
+    },
+    "consequences": {
+      "@id": "pat:consequence"
+    },
+    "relatedPatterns": {
+      "@id": "schema:isRelatedTo"
+    },
+    "aliases": {
+      "@id": "schema:alternateName"
+    },
+    "languages": {
+      "@id": "schema:programmingLanguage"
+    },
+    "Observer": {"@id": "gof:ObserverPattern"},
+    "Factory": {"@id": "gof:FactoryPattern"},
+    "Singleton": {"@id": "gof:SingletonPattern"},
+    "Adapter": {"@id": "gof:AdapterPattern"},
+    "Decorator": {"@id": "gof:DecoratorPattern"},
+    "Strategy": {"@id": "gof:StrategyPattern"},
+    "Command": {"@id": "gof:CommandPattern"},
+    "Proxy": {"@id": "gof:ProxyPattern"},
+    "Builder": {"@id": "gof:BuilderPattern"},
+    "Facade": {"@id": "gof:FacadePattern"},
+    "Iterator": {"@id": "gof:IteratorPattern"}
+  }
+}
