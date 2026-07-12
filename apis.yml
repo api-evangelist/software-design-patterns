@@ -70,6 +70,8 @@ apis:
         url: https://www.patterns.dev/
 
 common:
+  - type: DomainSecurity
+    url: security/software-design-patterns-domain-security.yml
   - type: Reference
     url: https://refactoring.guru/design-patterns
   - type: Reference
