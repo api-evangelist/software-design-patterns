@@ -1,5 +1,6 @@
 aid: software-design-patterns
 name: Software Design Patterns
+kind: topic
 description: >-
   Software design patterns are reusable solutions to commonly occurring problems
   in software design. Originally catalogued by the Gang of Four (GoF) in 1994,
