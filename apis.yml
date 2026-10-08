@@ -95,6 +95,12 @@ apis:
         url: https://www.patterns.dev/
 
 common:
+  - type: Plans
+    url: plans/software-design-patterns-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/software-design-patterns-rate-limits.yml
+  - type: FinOps
+    url: finops/software-design-patterns-finops.yml
   - type: DomainSecurity
     url: security/software-design-patterns-domain-security.yml
   - type: Reference
